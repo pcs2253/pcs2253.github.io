@@ -1,7 +1,101 @@
-<!DOCTYPE html> 
-<html> 
-<body> 
-  <h1>안녕하세요, 제 홈페이지입니다</h1> 
-  <p>GitHub Pages로 만들었습니다!</p>
-</body> 
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="첨단융합학부 26학번 박찬서의 개인 홈페이지입니다.">
+  <title>박찬서 | Personal Home</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23542384'/%3E%3Cpath d='M20 46V18h11.5c8 0 12.5 3.6 12.5 10.2 0 6.8-4.5 10.6-12.5 10.6H27V46h-7zm7-13h4.2c3.6 0 5.5-1.6 5.5-4.8 0-3.1-1.9-4.6-5.5-4.6H27V33z' fill='white'/%3E%3C/svg%3E">
+  <style>
+    :root { --ink:#31224b; --muted:#6f647d; --line:#e4dced; --paper:#fbf8ff; --blue:#7751b8; --deep:#44216d; --accent:#f1eaff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Pretendard","Noto Sans KR","Malgun Gothic",Arial,sans-serif; line-height:1.7; }
+    a { color:inherit; }
+    .wrap { width:min(100% - 2.5rem,1040px); margin:0 auto; }
+    header { background:linear-gradient(125deg,#321752 0%,#7542aa 100%); color:white; padding:1rem 0 5.8rem; }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; font-size:.92rem; }
+    .brand { font-weight:800; letter-spacing:.03em; text-decoration:none; }
+    nav ul { display:flex; gap:1.2rem; padding:0; margin:0; list-style:none; }
+    nav a { color:#f5edff; text-decoration:none; }
+    nav a:hover,nav a:focus-visible { color:white; text-decoration:underline; text-underline-offset:.25rem; }
+    .hero { padding-top:5.5rem; max-width:720px; }
+    .eyebrow { display:inline-block; margin:0 0 .85rem; padding:.28rem .75rem; border:1px solid rgba(255,255,255,.35); border-radius:999px; color:#f1dcff; font-size:.86rem; font-weight:700; }
+    h1 { margin:0; font-size:clamp(2.6rem,8vw,5.4rem); line-height:1.08; letter-spacing:-.065em; }
+    .hero p { margin:1.4rem 0 0; color:#f2e8ff; font-size:clamp(1.02rem,2vw,1.2rem); }
+    main { margin-top:-2.35rem; padding-bottom:4rem; }
+    .grid { display:grid; grid-template-columns:.85fr 1.45fr; gap:1.25rem; align-items:start; }
+    .card { background:white; border:1px solid var(--line); border-radius:1.25rem; padding:clamp(1.45rem,3vw,2.5rem); box-shadow:0 .75rem 2rem rgba(23,52,87,.06); }
+    .intro { background:var(--accent); border-color:#dcccf4; }
+    .label { margin:0 0 .55rem; color:var(--blue); font-size:.82rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+    h2 { margin:0; font-size:clamp(1.45rem,3vw,2rem); line-height:1.3; letter-spacing:-.04em; }
+    .intro h2 { margin-bottom:1rem; }
+    .intro p,.card > p { margin:.7rem 0 0; }
+    .facts { margin:1.45rem 0 0; padding:1.2rem 0 0; border-top:1px solid #d4c1ed; }
+    .facts div + div { margin-top:.8rem; }
+    dt { color:var(--muted); font-size:.88rem; }
+    dd { margin:.08rem 0 0; font-weight:700; }
+    .section-stack { display:grid; gap:1.25rem; }
+    .tags { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.15rem; padding:0; list-style:none; }
+    .tags li { padding:.45rem .8rem; background:#f6f0ff; border:1px solid #e1d4f1; border-radius:999px; color:#593c86; font-size:.93rem; font-weight:650; }
+    .contact { background:var(--deep); border-color:var(--deep); color:white; }
+    .contact .label { color:#e0bcff; }
+    .contact p { color:#f0e4ff; }
+    .contact-note { display:inline-block; margin-top:1.1rem; padding:.45rem .75rem; border:1px solid rgba(255,255,255,.28); border-radius:.55rem; color:white; font-size:1.02rem; font-weight:700; text-decoration:none; }
+    footer { color:var(--muted); font-size:.88rem; text-align:center; padding:1.7rem 1rem 2.3rem; }
+    @media (max-width:700px) { header { padding-bottom:4.5rem; } .hero { padding-top:3.8rem; } .grid { grid-template-columns:1fr; } nav ul { gap:.85rem; font-size:.85rem; } .card { border-radius:1rem; } }
+    @media (max-width:380px) { .wrap { width:min(100% - 1.5rem,1040px); } nav ul { gap:.55rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="주요 메뉴">
+      <a class="brand" href="#top">CHANSEO PARK</a>
+      <ul>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#interests">관심사</a></li>
+        <li><a href="#contact">연락처</a></li>
+      </ul>
+    </nav>
+    <section class="wrap hero" id="top">
+      <p class="eyebrow">Advanced Convergence Studies · 2026</p>
+      <h1>박찬서</h1>
+      <p>배우고, 연결하고, 더 나은 가능성을 탐색합니다.</p>
+    </section>
+  </header>
+  <main class="wrap">
+    <div class="grid">
+      <section class="card intro" aria-labelledby="profile-title">
+        <p class="label">Profile</p>
+        <h2 id="profile-title">안녕하세요!</h2>
+        <p>첨단융합학부 26학번 박찬서입니다. 다양한 분야의 접점에서 저만의 방향을 찾아가고 있습니다.</p>
+        <dl class="facts">
+          <div><dt>소속</dt><dd>첨단융합학부</dd></div>
+          <div><dt>학번</dt><dd>2026학번</dd></div>
+        </dl>
+      </section>
+      <div class="section-stack">
+        <section class="card" id="about" aria-labelledby="about-title">
+          <p class="label">About me</p>
+          <h2 id="about-title">융합의 길을 고민하고 있습니다</h2>
+          <p>융합데이터과학과, 디지털헬스케어, 차세대지능형반도체 전공 진입을 고민하고 있습니다. 각 전공이 사회와 기술에 어떻게 기여하는지 배우며, 저에게 가장 잘 맞는 길을 찾아가고 싶습니다.</p>
+        </section>
+        <section class="card" id="interests" aria-labelledby="interests-title">
+          <p class="label">Interests</p>
+          <h2 id="interests-title">관심 분야</h2>
+          <ul class="tags" aria-label="관심 분야 목록">
+            <li>융합데이터과학</li><li>디지털 헬스케어</li><li>지능형 반도체</li><li>융합 기술</li>
+          </ul>
+        </section>
+        <section class="card contact" id="contact" aria-labelledby="contact-title">
+          <p class="label">Contact</p>
+          <h2 id="contact-title">연락처</h2>
+          <p>궁금한 점이 있다면 편하게 연락해 주세요.</p>
+          <a class="contact-note" href="tel:01076264832">010-7626-4832</a>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>© 2026 박찬서. All rights reserved.</footer>
+</body>
 </html>
